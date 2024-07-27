@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura switch em JavaScript</title>
+    <script src="switch.js"></script>
+</head>
+
+<body>
+    <h1>Estrutura <code>switch</code> em JavaScript</h1>
+    <p>A estrutura <code>switch</code> em JavaScript é utilizada para executar diferentes blocos de código com base no
+        valor de uma expressão. É uma alternativa ao uso de múltiplos <code>if</code> e <code>else if</code>,
+        especialmente quando se lida com várias condições baseadas em valores discretos.</p>
+
+    <h2>Conceito Básico:</h2>
+    <ul>
+        <li><code>switch</code>: Avalia uma expressão e compara seu valor com diferentes casos (<code>case</code>).</li>
+        <li><code>case</code>: Define um valor específico para comparar com a expressão.</li>
+        <li><code>default</code>: Opcionalmente, especifica o bloco de código a ser executado se nenhum dos casos
+            corresponder.</li>
+    </ul>
+
+    <h2>Funcionamento:</h2>
+    <ol>
+        <li><strong>Expressão</strong>: O <code>switch</code> avalia uma expressão e compara o resultado com os valores
+            especificados nos <code>case</code>.</li>
+        <li><strong>Casos</strong>: Se o valor da expressão corresponder a um <code>case</code>, o bloco de código
+            correspondente será executado.</li>
+        <li><strong>Padrão</strong>: Se nenhum <code>case</code> corresponder, o bloco de código no <code>default</code>
+            será executado (se estiver presente).</li>
+    </ol>
+
+    <h2>Exemplo Prático:</h2>
+    <pre><code>
+const dia = 'quarta-feira';
+
+switch (dia) {
+    case 'segunda-feira':
+        console.log('Início da semana de trabalho.');
+        break;
+    case 'quarta-feira':
+        console.log('Dia de reunião.');
+        break;
+    case 'sexta-feira':
+        console.log('Preparação para o final de semana.');
+        break;
+    default:
+        console.log('Dia não reconhecido.');
+}
+    </code></pre>
+
+    <h2>Aplicações Comuns:</h2>
+    <ul>
+        <li><strong>Escolhas Baseadas em Valor</strong>: Quando você precisa executar diferentes ações dependendo de um
+            valor específico.</li>
+        <li><strong>Organização de Código</strong>: Facilita a leitura e manutenção do código em comparação com
+            múltiplos <code>if</code> e <code>else if</code>.</li>
+    </ul>
+</body>
+
+</html>
