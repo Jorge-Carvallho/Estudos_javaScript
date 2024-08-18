@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação: Arrays em JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <section>
+        <h1>Arrays em JavaScript: Conceitos e Aplicações</h1>
+    </section>
+
+    <section>
+        <h2>O que são Arrays?</h2>
+        <p>Um array é uma estrutura de dados que armazena múltiplos valores em uma única variável. Os valores são
+            armazenados em posições chamadas índices, começando do índice 0.</p>
+    </section>
+
+    <section>
+        <h2>Como Criar um Array</h2>
+        <pre><code>let frutas = ["maçã", "banana", "laranja"];</code></pre>
+        <p>Aqui, criamos um array chamado <code>frutas</code> contendo três elementos: "maçã", "banana" e "laranja".</p>
+    </section>
+
+    <section>
+        <h2>Como Acessar Elementos</h2>
+        <pre><code>console.log(frutas[0]); // saída: maçã
+console.log(frutas[2]); // saída: laranja</code></pre>
+        <p>Acessamos os elementos de um array usando os índices. O primeiro elemento tem índice 0.</p>
+    </section>
+
+    <section>
+        <h2>Modificar um Array</h2>
+        <pre><code>frutas.push("uva"); // adiciona 'uva' ao final
+frutas.pop(); // remove o último elemento ('uva')</code></pre>
+        <p><code>push</code>: Adiciona um elemento ao final do array.<br>
+            <code>pop</code>: Remove o último elemento.
+        </p>
+    </section>
+
+    <section>
+        <h2>Iterar sobre Arrays</h2>
+        <pre><code>for (let i = 0; i < frutas.length; i++) {
+    console.log(frutas[i]);
+}</code></pre>
+        <p>Usamos um loop para iterar sobre os elementos de um array e realizar operações em cada item.</p>
+    </section>
+
+    <section>
+        <h2>Métodos Úteis</h2>
+        <p><code>length</code>: Retorna o tamanho do array.<br>
+            <code>shift()</code>: Remove o primeiro elemento.<br>
+            <code>unshift()</code>: Adiciona um elemento no início do array.<br>
+            <code>indexOf()</code>: Retorna o índice de um elemento específico.
+        </p>
+    </section>
+
+    <section>
+        <h2>Arrays em Ação</h2>
+        <p>Arrays são fundamentais no desenvolvimento web, permitindo organizar e manipular grandes conjuntos de dados.
+            Combinados com loops e métodos de array, eles oferecem flexibilidade para solucionar uma ampla gama de
+            problemas em JavaScript.</p>
+    </section>
+</body>
+
+</html>

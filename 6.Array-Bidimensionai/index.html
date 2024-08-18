@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Arrays Bidimensionais em JavaScript</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Exemplo de Arrays Bidimensionais em JavaScript</h1>
+
+    <p>Abaixo está um exemplo que percorre uma matriz bidimensional, exibe os valores e calcula a soma de todos os
+        elementos:</p>
+
+    <pre><code>
+// Definindo uma matriz bidimensional de números
+const matrizNumeros = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+];
+
+// Exibindo a matriz original na página
+document.getElementById('matrizOriginal').textContent = JSON.stringify(matrizNumeros);
+
+// Variável para armazenar a soma dos elementos
+let soma = 0;
+let resultado = '';
+
+// Iterando sobre a matriz bidimensional
+for (let i = 0; i < matrizNumeros.length; i++) {
+    for (let j = 0; j < matrizNumeros[i].length; j++) {
+        const valor = matrizNumeros[i][j];
+        soma += valor; // Somando o valor atual à variável soma
+        resultado += 'Posição (' + i + ',' + j + ') tem o valor: ' + valor + '<br>';
+    }
+}
+
+// Exibindo o resultado na página
+document.getElementById('resultado').innerHTML = resultado;
+document.getElementById('somaTotal').textContent = soma;
+    </code></pre>
+
+    <h2>Matriz Original:</h2>
+    <div class="output" id="matrizOriginal"></div>
+
+    <h2>Resultado da Iteração:</h2>
+    <div class="output" id="resultado"></div>
+
+    <h2>Soma Total dos Elementos:</h2>
+    <div class="output" id="somaTotal"></div>
+
+    <script>
+        // Definindo uma matriz bidimensional de números
+        const matrizNumeros = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9],
+        ];
+
+        // Exibindo a matriz original na página
+        document.getElementById('matrizOriginal').textContent = JSON.stringify(matrizNumeros);
+
+        // Variável para armazenar a soma dos elementos
+        let soma = 0;
+        let resultado = '';
+
+        // Iterando sobre a matriz bidimensional
+        for (let i = 0; i < matrizNumeros.length; i++) {
+            for (let j = 0; j < matrizNumeros[i].length; j++) {
+                const valor = matrizNumeros[i][j];
+                soma += valor; // Somando o valor atual à variável soma
+                resultado += 'Posição (' + i + ',' + j + ') tem o valor: ' + valor + '<br>';
+            }
+        }
+
+        // Exibindo o resultado na página
+        document.getElementById('resultado').innerHTML = resultado;
+        document.getElementById('somaTotal').textContent = soma;
+    </script>
+</body>
+
+</html>

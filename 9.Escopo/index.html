@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo de Variáveis em JavaScript</title>
+</head>
+
+<body>
+    <header>
+        <h1>Escopo de Variáveis em JavaScript</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Introdução</h2>
+            <p>O escopo de uma variável determina onde ela pode ser acessada no código. Em JavaScript, o escopo pode ser
+                global ou local, dependendo de onde a variável é declarada e como ela é usada dentro das funções.</p>
+        </section>
+
+        <section>
+            <h2>Escopo Global e Local</h2>
+            <p>Variáveis declaradas fora de qualquer função têm escopo global e podem ser acessadas de qualquer lugar no
+                código. Já variáveis declaradas dentro de uma função têm escopo local e só podem ser acessadas dentro
+                dessa função.</p>
+        </section>
+
+        <section>
+            <h2>Exemplo de Escopo Global</h2>
+            <p>Quando uma variável é declarada fora de uma função, seu valor pode ser alterado e acessado dentro da
+                função. Veja como o valor de <code>pokemon</code> é alterado pela função <code>evoluir</code> e acessado
+                fora da função.</p>
+        </section>
+
+        <section>
+            <h2>Exemplo de Escopo Local</h2>
+            <p>Variáveis declaradas dentro de uma função não são acessíveis fora dela. Veja como a variável
+                <code>animal</code>, declarada dentro da função <code>criarAnimal</code>, não pode ser acessada fora da
+                função.
+            </p>
+        </section>
+
+        <section>
+            <h2>Escopo de Variáveis com <code>var</code> e <code>let</code></h2>
+            <p>Variáveis declaradas com <code>var</code> têm escopo de função e são acessíveis em todo o corpo da
+                função, enquanto variáveis declaradas com <code>let</code> têm escopo de bloco e são acessíveis apenas
+                dentro do bloco onde foram declaradas. Isso pode levar a diferenças na acessibilidade das variáveis
+                dependendo de onde e como elas são declaradas.</p>
+        </section>
+
+        <section>
+            <h2>Conclusão</h2>
+            <p>Entender o escopo de variáveis é crucial para evitar erros e escrever código mais eficiente e previsível.
+                Sempre considere onde suas variáveis são declaradas e como elas são acessadas para garantir um
+                comportamento esperado.</p>
+        </section>
+    </main>
+
+</body>
+
+</html>
