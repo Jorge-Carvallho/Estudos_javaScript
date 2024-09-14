@@ -1,0 +1,21 @@
+
+*{
+    background-color:rgb(23, 22, 22);
+color: aliceblue;
+}
+h1{
+    color: red
+}
+h5{
+    color: aqua;
+}
+
+.btn{
+    width: 100px;
+    height: 50px;
+    background-color:aqua;
+    border-radius: 30px;
+    color: brown;
+    font-weight: bold;
+
+}

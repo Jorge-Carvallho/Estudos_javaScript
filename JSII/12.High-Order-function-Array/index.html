@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Arrays em JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Manipulação de Arrays em JavaScript</h1>
+
+    <h2>Método <code>map</code></h2>
+    <p>O método <code>map</code> cria um novo array com os resultados da aplicação de uma função a cada elemento do
+        array original.</p>
+    <pre class="code-block">
+const personagens = [
+    { nivel: 42, nome: "Thrall", raca: "Orc", classe: "Xamã" },
+    { nivel: 28, nome: "Garrosh", raca: "Orc", classe: "Guerreiro" },
+    // mais personagens...
+];
+
+let niveis = personagens.map(personagem => personagem.nivel);
+let nomes = personagens.map(personagem => personagem.nome);
+let racas = personagens.map(personagem => personagem.raca);
+let classes = personagens.map(personagem => personagem.classe);
+
+console.log(nomes);  // ['Thrall', 'Garrosh', ...]
+console.log(niveis); // [42, 28, ...]
+console.log(racas);  // ['Orc', 'Orc', ...]
+console.log(classes); // ['Xamã', 'Guerreiro', ...]
+    </pre>
+
+    <h2>Método <code>filter</code></h2>
+    <p>O método <code>filter</code> cria um novo array com todos os elementos que passam em um teste fornecido por uma
+        função.</p>
+    <pre class="code-block">
+let orcs = personagens.filter(personagem => personagem.raca === "Orc");
+let niveis35 = personagens.filter(personagem => personagem.nivel === 35);
+let guerreiros = personagens.filter(personagem => personagem.classe === "Guerreiro");
+
+console.log(orcs);      // [ { nivel: 42, nome: 'Thrall', raca: 'Orc', classe: 'Xamã' }, ... ]
+console.log(niveis35);  // [ { nivel: 35, nome: 'Varok', raca: 'Orc', classe: 'Guerreiro' }, ... ]
+console.log(guerreiros); // [ { nivel: 28, nome: 'Garrosh', raca: 'Orc', classe: 'Guerreiro' }, ... ]
+    </pre>
+
+    <h2>Método <code>reduce</code></h2>
+    <p>O método <code>reduce</code> aplica uma função a um acumulador e a cada valor do array para reduzi-lo a um único
+        valor.</p>
+    <pre class="code-block">
+let nivelTotal = personagens.reduce((total, personagem) => total + personagem.nivel, 0);
+console.log(nivelTotal); // Soma total dos níveis
+
+let racas = personagens.reduce((acumulador, personagem) => {
+    if (acumulador[personagem.raca]) {
+        acumulador[personagem.raca].push(personagem);
+    } else {
+        acumulador[personagem.raca] = [personagem];
+    }
+    return acumulador;
+}, {});
+console.log(racas);
+
+let niveis = personagens.reduce((acumulador, personagem) => {
+    if (acumulador[personagem.nivel]) {
+        acumulador[personagem.nivel].push(personagem);
+    } else {
+        acumulador[personagem.nivel] = [personagem];
+    }
+    return acumulador;
+}, {});
+console.log(niveis);
+
+let classes = personagens.reduce((acumulador, personagem) => {
+    if (acumulador[personagem.classe]) {
+        acumulador[personagem.classe].push(personagem);
+    } else {
+        acumulador[personagem.classe] = [personagem];
+    }
+    return acumulador;
+}, {});
+console.log(classes);
+    </pre>
+
+    <h2>Método <code>sort</code></h2>
+    <p>O método <code>sort</code> ordena os elementos do array e modifica o array original. Você pode fornecer uma
+        função de comparação para definir a ordem.</p>
+    <pre class="code-block">
+personagens.sort((a, b) => a.nivel - b.nivel);
+console.log(personagens);
+
+let personagensOrdenados = personagens.slice().sort((a, b) => a.nivel - b.nivel);
+console.log(personagensOrdenados);
+    </pre>
+
+</body>
+
+</html>

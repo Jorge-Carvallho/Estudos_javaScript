@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-Order Function e Outros Conceitos</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>High-Order Function e Exemplos de Manipulação de Arrays</h1>
+
+    <h2>Funções de Alta Ordem (High-Order Functions)</h2>
+    <p>
+        Uma função de alta ordem (high-order function) é uma função que recebe outra função como argumento ou retorna
+        uma função como resultado.
+    </p>
+
+    <pre>
+// Função de alta ordem para calcular operações matemáticas
+function calcular(a, b, operacao) {
+    let resultado = operacao(a, b); // Executa a operação recebida
+    return resultado;
+}
+
+// Funções de operação
+function somar(x, y) {
+    return x + y;
+}
+
+function dividir(c, d) {
+    return c / d;
+}
+
+// Exemplos de uso:
+console.log(calcular(2, 5, somar));  // Resultado: 7
+console.log(calcular(2, 5, dividir));  // Resultado: 0.4
+
+// Usando função anônima diretamente
+console.log(calcular(4, 2, (e, f) => {
+    return e * f;
+}));  // Resultado: 8
+    </pre>
+
+    <h2>Manipulação de Arrays com forEach</h2>
+    <p>
+        O método <code>forEach</code> permite iterar sobre cada elemento de um array e executar uma função para cada
+        elemento.
+    </p>
+
+    <pre>
+// Função que exibe elementos de um array
+function exibirElemento(elemento, indice, array) {
+    console.log({
+        elemento,
+        indice,
+        array
+    });
+}
+
+let lista = ['Maçã', 'Banana', 'Arroz'];
+
+// Iterando com forEach
+lista.forEach(exibirElemento);
+    </pre>
+
+    <h2>Somando Níveis de Personagens por Raça</h2>
+    <p>
+        Neste exemplo, utilizamos <code>filter</code> para filtrar personagens por raça e <code>reduce</code> para somar
+        seus níveis.
+    </p>
+
+    <pre>
+// Lista de personagens
+const personagens = [
+    { nivel: 42, nome: "Thrall", raca: "Orc", classe: "Xamã" },
+    { nivel: 28, nome: "Garrosh", raca: "Orc", classe: "Guerreiro" },
+    { nivel: 35, nome: "Varok", raca: "Orc", classe: "Guerreiro" },
+    { nivel: 35, nome: "Uther", raca: "Humano", classe: "Paladino" },
+    { nivel: 26, nome: "Jaina", raca: "Humano", classe: "Maga" },
+    { nivel: 39, nome: "Tyrande", raca: "Elfo Noturno", classe: "Sacerdotisa" },
+    { nivel: 29, nome: "Muradin", raca: "Anão", classe: "Guerreiro" }
+];
+
+// Função que soma os níveis dos personagens de uma raça específica
+function somaNiveisPorRaca(raca) {
+    return personagens
+        .filter(personagem => personagem.raca === raca)
+        .reduce((acumulado, personagem) => acumulado + personagem.nivel, 0);
+}
+
+// Exemplo de uso
+console.log("Soma dos níveis dos Orcs:", somaNiveisPorRaca("Orc"));
+    </pre>
+
+    <div class="output">
+        <p><strong>Saída:</strong></p>
+        <p>Soma dos níveis dos Orcs: 105</p>
+    </div>
+
+</body>
+
+</html>

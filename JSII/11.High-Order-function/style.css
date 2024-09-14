@@ -1,0 +1,25 @@
+ 
+body {
+font-family: Arial, sans-serif;
+background-color: #f9f9f9;
+padding: 20px;
+}
+
+h1 {
+color: #333;
+}
+pre {
+background-color: #cccccc;
+padding: 15px;
+border-radius: 5px;
+border: 1px solid #ddd;
+}
+
+.output {
+background-color: #fafafa;
+padding: 15px;
+margin-top: 20px;
+border: 1px solid #ddd;
+border-radius: 5px;
+}
+ 
